@@ -4,7 +4,6 @@ import { Card } from "react-native-elements";
 import { CAMPSITES } from "../shared/campsites";
 import { PROMOTIONS } from "../shared/promotions";
 import { PARTNERS } from "../shared/partners";
-import Render from "react-native-web/dist/cjs/exports/render";
 
 function RenderItem({ item }) {
   if (item) {
@@ -38,9 +37,7 @@ class Home extends Component {
     return (
       <ScrollView>
         <RenderItem
-          item={
-            this.state.campsites.filter((campsites) => campsite.featured)[0]
-          }
+          item={this.state.campsites.filter((campsite) => campsite.featured)[0]}
         />
         <RenderItem
           item={
